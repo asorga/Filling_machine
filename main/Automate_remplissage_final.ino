@@ -1,6 +1,6 @@
 //####################################################################################################################################################
 // Automate remplissage
-// nombre d'heures perdues à améliorer cette version : 4
+// hours lost trying to improve this version : 4
 //####################################################################################################################################################
 
 //importation des bibliotèques
@@ -11,7 +11,7 @@
 #include "Motor_control.h"
 #include "Mem.h"
 
-//definition du type Etat représentant l'état du système à tout instant
+//definition of the States
 enum Etat {
   Et_Dem,
   Et_Selection,
@@ -31,17 +31,17 @@ Etat Etat_Automate = Et_Dem;
 /*
 int V_GR10_12 = 1;          //adresse memoire des volumes
 int V_GR10_35 = 3;  
-int DI31 = 5;               //17
-int DI33 = 7;               //34
-int CLA3 = 9;               //160
+int DI31 = 5;               
+int DI33 = 7;               
+int CLA3 = 9;               
 int CLA4 = 11;
 int CLA5 = 13;
 int TS59_3 = 15;
 int TS59_4 = 17;
 */
 
-int MlToInc = 260;         //1 ml equals 214 increments pour l'eau, 260 pour l'huile
-int red_stockage = 4;
+int MlToInc = 260;         //1 ml equals 214 increments for water, 260 for oil
+int red_stockage = 4;      // We devide the position by 4 in order to increase the max value
 //const long MlToInc = 214; 
 
 
@@ -57,8 +57,8 @@ bool Up = true;                           //sens de variation du compteur
 
 //motor_control
 
-int target = 0;                           //position voulue (= volume final)
-int position_motor = 0;                   //position actuelle (= volume versé)
+int target = 0;                           //final position (= final volume)
+int position_motor = 0;                   //vurrent position (= current volume)
 int direction_motor = 0;
 
 int addr;                                 // Variable de stockage des addresses mémoires
