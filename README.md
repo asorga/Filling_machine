@@ -3,7 +3,7 @@ This Arduino project aims to automate the filling process of different oil produ
 
 # Key Features
 
-- Volume Storage: Up to 10 different volumes can be saved in the EEPROM memory.
+- Volume Storage: Up to 10 different volumes can be saved in the arduino EEPROM memory.
 
 - Automatic Filling: Uses a volumetric vacuum pump equiped with a rotary encoder for precise filling.
 
