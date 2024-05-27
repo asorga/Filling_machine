@@ -12,7 +12,7 @@ int button_pushed(int button){
 
 int button_pushed_once(int button, bool* last_pos_button){
   /*
-   * same as before exept that we will only detect the position once
+   * same as before exept that we will only return true once
    */
   int pos_button  = !(digitalRead(button));
 
